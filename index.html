@@ -3,98 +3,359 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pan African Development Alliance | PADA</title>
 
+<meta name="description" content="PADA is an African-led development organisation advancing sustainable development through programme implementation, technical assistance and strategic partnerships.">
+
 <style>
-* { box-sizing: border-box; }
+:root {
+    --navy: #102a43;
+    --blue: #173f5f;
+    --gold: #d6a63c;
+    --green: #32776b;
+    --light: #f4f7f9;
+    --white: #ffffff;
+    --text: #34495e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #263238;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
     line-height: 1.7;
 }
 
-header {
-    background: #102A43;
-    color: white;
-    text-align: center;
-    padding: 35px 15px;
+.container {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-header h1 { margin: 0; font-size: 30px; }
-header p { color: #E5B84B; }
+header {
+    background: var(--navy);
+    color: white;
+    padding: 17px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h2 {
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #dce5ed;
+}
 
 nav {
-    background: #173F5F;
-    padding: 18px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 10px;
+    font-size: 13px;
     font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--gold);
 }
 
 .hero {
-    background: #F0F4F7;
-    text-align: center;
-    padding: 90px 10%;
+    background:
+    linear-gradient(110deg, rgba(16,42,67,.96), rgba(23,63,95,.82)),
+    url("https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 125px 0;
 }
 
-.hero h2 {
-    color: #102A43;
-    font-size: 38px;
+.hero-content {
+    max-width: 780px;
+}
+
+.hero .label {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
 }
 
 .hero p {
-    max-width: 850px;
-    margin: auto;
     font-size: 18px;
+    color: #e8eef3;
 }
 
-.button {
+.btn {
     display: inline-block;
-    background: #D6A63C;
-    color: #102A43;
-    padding: 13px 25px;
-    margin-top: 25px;
+    margin-top: 30px;
+    padding: 14px 27px;
+    background: var(--gold);
+    color: var(--navy);
     text-decoration: none;
     font-weight: bold;
+    border-radius: 3px;
 }
 
-section { padding: 55px 10%; }
+.btn:hover {
+    background: white;
+}
 
-section h2 {
-    color: #102A43;
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-left: 10px;
+}
+
+.section {
+    padding: 85px 0;
+}
+
+.section-light {
+    background: var(--light);
+}
+
+.section-heading {
     text-align: center;
-    margin-bottom: 30px;
+    max-width: 780px;
+    margin: 0 auto 45px;
 }
 
-.focus-grid {
+.section-heading span {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: var(--navy);
+    margin: 12px 0;
+}
+
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: var(--navy);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.stats {
+    background: var(--navy);
+    color: white;
+    padding: 45px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 25px;
+}
+
+.stats h3 {
+    color: var(--gold);
+    font-size: 27px;
+}
+
+.stats p {
+    font-size: 14px;
+}
+
+.focus-grid,
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
 }
 
 .card {
-    background: #F0F4F7;
-    padding: 25px;
-    border-top: 5px solid #D6A63C;
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    border-bottom: 4px solid var(--gold);
+    box-shadow: 0 4px 18px rgba(0,0,0,.05);
+}
+
+.card h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card-number {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.service-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.experience {
+    background: var(--blue);
+    color: white;
+}
+
+.experience h2 {
+    color: white;
+}
+
+.experience p {
+    max-width: 900px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.partnership {
+    background: var(--light);
+    text-align: center;
+}
+
+.partnership h2 {
+    color: var(--navy);
+    font-size: 34px;
+}
+
+.partnership p {
+    max-width: 750px;
+    margin: 15px auto;
 }
 
 footer {
-    background: #102A43;
+    background: #091d30;
     color: white;
+    padding: 45px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 35px;
+}
+
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+footer a {
+    display: block;
+    color: #dce5ed;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+.copyright {
+    border-top: 1px solid #38516a;
     text-align: center;
-    padding: 30px;
+    margin-top: 35px;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+@media(max-width:850px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .about-grid,
+    .service-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media(max-width:600px) {
-    nav a { display: block; }
-    .hero h2 { font-size: 28px; }
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding: 85px 0;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .focus-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
 }
 </style>
 </head>
@@ -102,111 +363,347 @@ footer {
 <body>
 
 <header>
-<h1>PAN AFRICAN DEVELOPMENT ALLIANCE</h1>
-<p>African Leadership. Integrated Development. Sustainable Impact.</p>
-</header>
+<div class="container header-content">
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About PADA</a>
-<a href="#focus">Our Focus</a>
-<a href="#services">Our Services</a>
-<a href="#partnerships">Partnerships</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<div class="hero" id="home">
-<h2>Advancing Sustainable Development Across Africa</h2>
-<p>
-Pan African Development Alliance (PADA) is an African-owned
-and African-led development organisation advancing sustainable,
-inclusive and locally driven development across Africa.
-Through strategic partnerships, technical expertise and integrated
-programme implementation, we strengthen institutions, mobilise
-resources and deliver development solutions that improve lives.
-</p>
-<a href="#about" class="button">Discover PADA</a>
+<div class="logo">
+<h2>PADA<span>.</span></h2>
+<p>PAN AFRICAN DEVELOPMENT ALLIANCE</p>
 </div>
 
-<section id="about">
-<h2>Who We Are</h2>
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
+<a href="#focus">OUR FOCUS</a>
+<a href="#services">SERVICES</a>
+<a href="#experience">EXPERIENCE</a>
+<a href="#partnerships">PARTNERSHIPS</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container hero-content">
+
+<p class="label">AFRICAN-LED DEVELOPMENT</p>
+
+<h1>African Leadership.<br>
+Integrated Development.<br>
+Sustainable Impact.</h1>
+
 <p>
-PADA works to strengthen development systems, build institutional
-capacity and promote effective partnerships between governments,
-development agencies, civil society, communities and the private sector.
+Advancing sustainable, inclusive and locally driven development
+across Africa through strategic partnerships, technical expertise,
+strong institutions and effective programme implementation.
 </p>
-<p>
-Our multidisciplinary approach supports the design, implementation,
-management and oversight of development programmes that deliver
-measurable and sustainable outcomes.
-</p>
+
+<a href="#about" class="btn">DISCOVER PADA</a>
+<a href="#partnerships" class="btn btn-outline">PARTNER WITH US</a>
+
+</div>
 </section>
 
-<section id="focus">
-<h2>Our Strategic Focus Areas</h2>
+<!-- ABOUT -->
+
+<section class="section" id="about">
+<div class="container about-grid">
+
+<div class="about-text">
+
+<p class="card-number">WHO WE ARE</p>
+
+<h2>Building Stronger African Development Systems</h2>
+
+<p>
+Pan African Development Alliance (PADA) is an African-owned
+and African-led development organisation dedicated to
+sustainable, inclusive and locally driven development across
+the continent.
+</p>
+
+<br>
+
+<p>
+We work with governments, development agencies, civil society,
+communities and private-sector institutions to strengthen
+development systems, build institutional capacity and deliver
+impact-oriented programmes.
+</p>
+
+<br>
+
+<p>
+Our approach combines programme implementation, technical
+expertise, institutional strengthening, resource mobilisation
+and strategic partnerships to translate development priorities
+into sustainable outcomes.
+</p>
+
+</div>
+
+<img class="about-image"
+src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=85"
+alt="Community collaboration">
+
+</div>
+</section>
+
+<!-- ORGANISATIONAL IDENTITY -->
+
+<section class="stats">
+<div class="container stats-grid">
+
+<div>
+<h3>2026</h3>
+<p>Established as an African-led development organisation</p>
+</div>
+
+<div>
+<h3>Multi-sector</h3>
+<p>Integrated development expertise</p>
+</div>
+
+<div>
+<h3>Africa</h3>
+<p>Regional partnerships and collaboration</p>
+</div>
+
+</div>
+</section>
+
+<!-- FOCUS AREAS -->
+
+<section class="section section-light" id="focus">
+<div class="container">
+
+<div class="section-heading">
+<span>OUR DEVELOPMENT PRIORITIES</span>
+<h2>Strategic Focus Areas</h2>
+<p>
+Our integrated approach addresses interconnected development
+challenges through four strategic focus clusters.
+</p>
+</div>
 
 <div class="focus-grid">
 
 <div class="card">
-<h3>Social and Human Development</h3>
-<p>Health systems, education, youth development, gender equality,
-human rights and humanitarian response.</p>
+<p class="card-number">01 / SOCIAL DEVELOPMENT</p>
+<h3>Social & Human Development</h3>
+<p>
+Health systems, education and youth development, gender equality,
+human rights, community wellbeing and humanitarian response.
+</p>
 </div>
 
 <div class="card">
-<h3>Economic Development and Sustainability</h3>
-<p>Agriculture, food security, climate resilience, environmental
-sustainability, water and development finance.</p>
+<p class="card-number">02 / ECONOMIC DEVELOPMENT</p>
+<h3>Economic Development & Sustainability</h3>
+<p>
+Agriculture, food security, climate resilience, environment,
+water, supply chains and sustainable livelihoods.
+</p>
 </div>
 
 <div class="card">
-<h3>Performance, Learning and Innovation</h3>
-<p>Research, monitoring, evaluation, learning, data analytics
-and evidence-informed programming.</p>
+<p class="card-number">03 / INNOVATION</p>
+<h3>Performance, Learning & Innovation</h3>
+<p>
+Research, monitoring, evaluation, learning, data analytics,
+knowledge management and evidence-informed programming.
+</p>
 </div>
 
 <div class="card">
-<h3>Governance and Institutional Systems</h3>
-<p>Institutional strengthening, public sector systems,
-organisational development and operational excellence.</p>
+<p class="card-number">04 / INSTITUTIONAL SYSTEMS</p>
+<h3>Governance & Institutional Systems</h3>
+<p>
+Public sector strengthening, institutional effectiveness,
+organisational development, accountability and operational excellence.
+</p>
 </div>
 
+</div>
 </div>
 </section>
 
-<section id="services">
+<!-- SERVICES -->
+
+<section class="section" id="services">
+<div class="container">
+
+<div class="section-heading">
+<span>OUR TECHNICAL EXPERTISE</span>
 <h2>What We Do</h2>
 <p>
-PADA provides programme management and implementation,
-grant and fund management, technical assistance,
-institutional strengthening, capacity development,
-policy research and development advisory services.
+We provide integrated development services across the programme
+lifecycle, from design and resource mobilisation to implementation,
+performance management and institutional strengthening.
 </p>
+</div>
+
+<div class="service-grid">
+
+<div class="card">
+<h3>Grant & Fund Management</h3>
+<p>
+Grant administration, financial oversight, donor compliance,
+resource mobilisation, proposal development and subgrant management.
+</p>
+</div>
+
+<div class="card">
+<h3>Programme Management & Implementation</h3>
+<p>
+Programme design, implementation coordination, portfolio
+management, monitoring, quality assurance and reporting.
+</p>
+</div>
+
+<div class="card">
+<h3>Capacity Building & Institutional Strengthening</h3>
+<p>
+Leadership development, organisational assessments,
+workforce development, training and systems improvement.
+</p>
+</div>
+
+<div class="card">
+<h3>Policy, Research & Knowledge Systems</h3>
+<p>
+Policy advisory, operational research, evaluations,
+data systems, analytics and knowledge dissemination.
+</p>
+</div>
+
+<div class="card">
+<h3>Advisory & Development Consulting</h3>
+<p>
+Strategy, governance reform, ESG, sustainability,
+development finance and institutional advisory.
+</p>
+</div>
+
+<div class="card">
+<h3>Government Systems & G2G Support</h3>
+<p>
+Public sector reform, intergovernmental coordination,
+service delivery strengthening and regional collaboration.
+</p>
+</div>
+
+</div>
+</div>
 </section>
 
-<section id="partnerships">
-<h2>Building Partnerships for Impact</h2>
+<!-- EXPERIENCE -->
+
+<section class="section experience" id="experience">
+<div class="container">
+
+<div class="section-heading">
+<span>OUR COLLECTIVE EXPERIENCE</span>
+<h2>Experience That Strengthens Delivery</h2>
+</div>
+
 <p>
-We welcome strategic collaborations with governments,
-bilateral and multilateral development agencies, donors,
-foundations, NGOs, civil society organisations,
-research institutions and private-sector partners.
+PADA's leadership and technical teams bring extensive
+professional experience in the design, management,
+implementation and oversight of large-scale donor-funded
+and government-supported development programmes across Africa.
 </p>
+
+<p>
+This collective experience spans public health, health systems
+strengthening, education, youth development, governance,
+humanitarian response, supply chains and sustainable development.
+</p>
+
+<p>
+Our teams have contributed to programmes supported by bilateral
+and multilateral partners, governments, global health institutions
+and development agencies.
+</p>
+
+</div>
 </section>
 
-<section id="contact">
-<h2>Partner With PADA</h2>
+<!-- PARTNERSHIPS -->
+
+<section class="section partnership" id="partnerships">
+<div class="container">
+
+<p class="card-number">COLLABORATION FOR IMPACT</p>
+
+<h2>Building Partnerships for Africa's Development</h2>
+
 <p>
-Join us in advancing African-led development solutions
-and building sustainable outcomes across the continent.
+We welcome strategic partnerships with governments, bilateral
+and multilateral agencies, donors, foundations, NGOs, civil
+society organisations, research institutions and private-sector
+partners.
 </p>
-<p>Johannesburg, South Africa</p>
-<p>Website: panafricanda.org</p>
+
+<p>
+Whether through consortium arrangements, joint proposals,
+technical assistance or programme implementation, PADA is
+committed to building collaborations that deliver measurable
+development outcomes.
+</p>
+
+<a href="mailto:info@panafricanda.org" class="btn">
+EXPLORE PARTNERSHIPS
+</a>
+
+</div>
 </section>
+
+<!-- FOOTER -->
 
 <footer>
-<p>&copy; 2026 Pan African Development Alliance (PADA).</p>
-<p>African Leadership. Integrated Development. Sustainable Impact.</p>
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h3>PAN AFRICAN DEVELOPMENT ALLIANCE</h3>
+<p>
+African-owned. African-led. Committed to sustainable
+development, institutional strengthening and partnerships
+that improve lives across Africa.
+</p>
+</div>
+
+<div>
+<h3>EXPLORE</h3>
+<a href="#about">About PADA</a>
+<a href="#focus">Strategic Focus Areas</a>
+<a href="#services">Our Services</a>
+<a href="#experience">Our Experience</a>
+</div>
+
+<div>
+<h3>CONNECT</h3>
+<p>Johannesburg, South Africa</p>
+<a href="https://panafricanda.org">PADA Website Domain</a>
+<a href="#partnerships">Partnership Opportunities</a>
+</div>
+
+</div>
+
+<div class="copyright">
+<p>
+&copy; 2026 Pan African Development Alliance (PADA).
+All rights reserved.
+</p>
+<p>
+African Leadership. Integrated Development. Sustainable Impact.
+</p>
+</div>
+
+</div>
 </footer>
 
 </body>
