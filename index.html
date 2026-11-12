@@ -1,78 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pan African Development Alliance (PADA) advances sustainable, inclusive and locally driven development across Africa.">
-    <meta name="keywords" content="PADA, African Development, Programme Management, Development Partnerships, Health Systems Strengthening">
-    <meta name="author" content="Pan African Development Alliance">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pan African Development Alliance | PADA</title>
 
-    <title>Pan African Development Alliance | PADA</title>
+<style>
+* { box-sizing: border-box; }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #263238;
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    line-height: 1.7;
+}
 
-        header {
-            background-color: #102A43;
-            color: white;
-            padding: 25px 8%;
-            text-align: center;
-        }
+header {
+    background: #102A43;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
 
-        header h1 {
-            margin-bottom: 5px;
-            font-size: 32px;
-        }
+header h1 { margin: 0; font-size: 30px; }
+header p { color: #E5B84B; }
 
-        header p {
-            color: #E5B84B;
-            font-size: 16px;
-        }
+nav {
+    background: #173F5F;
+    padding: 18px;
+    text-align: center;
+}
 
-        nav {
-            background-color: #173F5F;
-            padding: 15px;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-        }
+.hero {
+    background: #F0F4F7;
+    text-align: center;
+    padding: 90px 10%;
+}
 
-        .hero {
-            background-color: #F2F5F7;
-            padding: 80px 10%;
-            text-align: center;
-        }
+.hero h2 {
+    color: #102A43;
+    font-size: 38px;
+}
 
-        .hero h2 {
-            color: #102A43;
-            font-size: 36px;
-        }
+.hero p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 18px;
+}
 
-        .hero p {
-            max-width: 800px;
-            margin: auto;
-            font-size: 18px;
-        }
+.button {
+    display: inline-block;
+    background: #D6A63C;
+    color: #102A43;
+    padding: 13px 25px;
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .button {
-            display: inline-block;
-            background-color: #D6A63C;
-            color: #102A43;
-            padding: 12px 25px;
-            margin-top: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-        }
+section { padding: 55px 10%; }
+
+section h2 {
+    color: #102A43;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #F0F4F7;
+    padding: 25px;
+    border-top: 5px solid #D6A63C;
+}
+
+footer {
+    background: #102A43;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width:600px) {
+    nav a { display: block; }
+    .hero h2 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>PAN AFRICAN DEVELOPMENT ALLIANCE</h1>
+<p>African Leadership. Integrated Development. Sustainable Impact.</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About PADA</a>
+<a href="#focus">Our Focus</a>
+<a href="#services">Our Services</a>
+<a href="#partnerships">Partnerships</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+<h2>Advancing Sustainable Development Across Africa</h2>
+<p>
+Pan African Development Alliance (PADA) is an African-owned
+and African-led development organisation advancing sustainable,
+inclusive and locally driven development across Africa.
+Through strategic partnerships, technical expertise and integrated
+programme implementation, we strengthen institutions, mobilise
+resources and deliver development solutions that improve lives.
+</p>
+<a href="#about" class="button">Discover PADA</a>
+</div>
+
+<section id="about">
+<h2>Who We Are</h2>
+<p>
+PADA works to strengthen development systems, build institutional
+capacity and promote effective partnerships between governments,
+development agencies, civil society, communities and the private sector.
+</p>
+<p>
+Our multidisciplinary approach supports the design, implementation,
+management and oversight of development programmes that deliver
+measurable and sustainable outcomes.
+</p>
+</section>
+
+<section id="focus">
+<h2>Our Strategic Focus Areas</h2>
+
+<div class="focus-grid">
+
+<div class="card">
+<h3>Social and Human Development</h3>
+<p>Health systems, education, youth development, gender equality,
+human rights and humanitarian response.</p>
+</div>
+
+<div class="card">
+<h3>Economic Development and Sustainability</h3>
+<p>Agriculture, food security, climate resilience, environmental
+sustainability, water and development finance.</p>
+</div>
+
+<div class="card">
+<h3>Performance, Learning and Innovation</h3>
+<p>Research, monitoring, evaluation, learning, data analytics
+and evidence-informed programming.</p>
+</div>
+
+<div class="card">
+<h3>Governance and Institutional Systems</h3>
+<p>Institutional strengthening, public sector systems,
+organisational development and operational excellence.</p>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+<h2>What We Do</h2>
+<p>
+PADA provides programme management and implementation,
+grant and fund management, technical assistance,
+institutional strengthening, capacity development,
+policy research and development advisory services.
+</p>
+</section>
+
+<section id="partnerships">
+<h2>Building Partnerships for Impact</h2>
+<p>
+We welcome strategic collaborations with governments,
+bilateral and multilateral development agencies, donors,
+foundations, NGOs, civil society organisations,
+research institutions and private-sector partners.
+</p>
+</section>
+
+<section id="contact">
+<h2>Partner With PADA</h2>
+<p>
+Join us in advancing African-led development solutions
+and building sustainable outcomes across the continent.
+</p>
+<p>Johannesburg, South Africa</p>
+<p>Website: panafricanda.org</p>
+</section>
+
+<footer>
+<p>&copy; 2026 Pan African Development Alliance (PADA).</p>
+<p>African Leadership. Integrated Development. Sustainable Impact.</p>
+</footer>
+
+</body>
 </html>
